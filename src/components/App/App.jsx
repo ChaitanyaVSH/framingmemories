@@ -8,7 +8,6 @@ const App = () => {
 
     return (
         <>
-            {JSON.stringify(appState)}
             <div>App</div>
         </>
     )
