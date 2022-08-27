@@ -1,12 +1,17 @@
 import React from 'react';
-import LandingPage from '../LandingPage/LandingPage';
+import { useSelector } from 'react-redux';
 
 const App = () => {
-  return (
-    <>
-        <div>App</div>
-    </>
-  )
-}
+
+    const appState = useSelector(state => state.appState)
+    console.log("appState", appState)
+
+    return (
+        <>
+            {JSON.stringify(appState)}
+            <div>App</div>
+        </>
+    )
+};
 
 export default App;
