@@ -8,9 +8,6 @@
     max-width: 1200px;
     height: 70px;
     background: linear-gradient(to right, #4776E6, #8E54E9);
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
 }
 
 .navBarWrapper > ul {
@@ -43,23 +40,26 @@ ul li {
         height: 100vh;
         width: 50%;
         margin: 0;
-        border: 1px solid black;
         background-color: #000;
-        z-index: -1;
         transform: translateX(500px);
+        transition: all 250ms ease-in-out;
     }
 
     .navBarWrapper ul li {
         color: #fff;
-        border: 1px solid green;
         margin: 10px 0;
+        padding-bottom: 3px;
+    }
+
+    .navBarWrapper ul li:hover {
+        color: orange;
     }
 
     .menuIcon {
         display: block;
         font-size: 25px;
         padding: 2px;
-        z-index: 2;
+        z-index: 1;
     }
 }
 
@@ -67,4 +67,8 @@ ul li {
     .navBarWrapper ul {
         width: 100%;
     }
+}
+
+.navBarWrapper ul.show {
+    transform: translateX(0px);
 }
