@@ -1,16 +1,23 @@
 .navBarWrapper {
+    margin-bottom: 8px;
+    width: 100%;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    color: #FD7E14;
+}
+
+.navBarWrapper .container {
+    max-width: 1200px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    margin-bottom: 8px;
     padding: 0 30px;
-    max-width: 1200px;
-    height: 70px;
-    background: linear-gradient(to right, #4776E6, #8E54E9);
 }
 
-.navBarWrapper > ul {
+.navBarWrapper .container > ul {
     display: flex;
 }
 
@@ -18,7 +25,7 @@ ul li {
     list-style: none;
     padding: 8px 16px;
     margin: 0 8px;
-    color: #fff;
+    color: #FD7E14;
     font-size: 20px;
     font-weight: 500;
 }
@@ -30,7 +37,7 @@ ul li {
 
 @media(max-width: 600px) {
 
-    .navBarWrapper ul {
+    .navBarWrapper .container ul {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -45,13 +52,12 @@ ul li {
         transition: all 250ms ease-in-out;
     }
 
-    .navBarWrapper ul li {
-        color: #fff;
+    .navBarWrapper .container ul li {
         margin: 10px 0;
         padding-bottom: 3px;
     }
 
-    .navBarWrapper ul li:hover {
+    .navBarWrapper .container ul li:hover {
         color: orange;
     }
 
@@ -64,11 +70,11 @@ ul li {
 }
 
 @media(max-width: 380px) {
-    .navBarWrapper ul {
+    .navBarWrapper .container ul {
         width: 100%;
     }
 }
 
-.navBarWrapper ul.show {
+.navBarWrapper .container ul.show {
     transform: translateX(0px);
 }
