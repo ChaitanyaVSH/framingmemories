@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Showcase from '../Showcase/Showcase';
 import { useDispatch } from 'react-redux';
@@ -8,7 +8,9 @@ const App = () => {
 
     const dispatch = useDispatch();
 
-    dispatch(fetchImages());
+    useEffect(() => {
+        dispatch(fetchImages()); // eslint-disable-next-line
+    }, [])
 
     const appState = useSelector(state => state.appState)
     console.log("appState", appState)

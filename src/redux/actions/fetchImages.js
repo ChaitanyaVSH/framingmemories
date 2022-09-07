@@ -42,7 +42,6 @@ const fetchImagesApi = async () => {
     if (response && response.status === 200) {
       data = response.data;
     }
-    console.log("DATA", data)
     return data;
   };
 
