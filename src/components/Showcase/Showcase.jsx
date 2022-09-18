@@ -27,7 +27,7 @@ const Showcase = () => {
     return (
         <div className={styles.showcase}>
             <div className={styles.overlay}></div>
-            <img src={images[imageIndex]} alt="image" className={styles.image}/>
+            <img src={images[imageIndex]} alt="captured by mahesh" className={styles.image}/>
         </div>
     )
 }
