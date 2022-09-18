@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
 import Showcase from '../Showcase/Showcase';
 import { useDispatch } from 'react-redux';
 import fetchImages from '../../redux/actions/fetchImages';
@@ -7,17 +6,19 @@ import fetchImages from '../../redux/actions/fetchImages';
 const App = () => {
 
     const dispatch = useDispatch();
+    const [render, setRender] = useState(false);
 
     useEffect(() => {
         dispatch(fetchImages()); // eslint-disable-next-line
     }, [])
 
-    const appState = useSelector(state => state.appState)
-    console.log("appState", appState)
+    setTimeout(() => {
+        setRender(true)
+    }, 1000)
 
     return (
         <>
-            <Showcase/>
+            {render ? <Showcase/> : null}
         </>
     )
 };

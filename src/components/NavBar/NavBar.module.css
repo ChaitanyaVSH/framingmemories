@@ -4,7 +4,7 @@
     background: transparent;
     position: fixed;
     top: 0;
-    color: #FD7E14;
+    color: #fff;
 }
 
 .navBarWrapper .container {
@@ -25,9 +25,9 @@ ul li {
     list-style: none;
     padding: 8px 16px;
     margin: 0 8px;
-    color: #FD7E14;
+    color: #fff;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 900;
 }
 
 .menuIcon {
