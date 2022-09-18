@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from "../../assets/logo.jpg"
 
 // Icons
 import { AiOutlineMenu } from "react-icons/ai";
@@ -16,7 +17,7 @@ const NavBar = () => {
   return (
     <div className={styles.navBarWrapper}>
       <div className={styles.container}>
-        <h2>Framing Memories</h2>
+        <img src={logo} alt="Logo" className={styles.image}/>
         <ul className={showMenu ? styles.show : ""}>
           <li>Gallery</li>
           <li>Services</li>

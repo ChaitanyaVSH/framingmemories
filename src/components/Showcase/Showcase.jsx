@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from "./Showcase.module.css";
 
 // Images
@@ -16,13 +16,18 @@ import lp9 from "../../assets/lp9.jpeg";
 const Showcase = () => {
 
     const images = [lp1, lp2, lp3, lp4, lp5, lp6, lp7, lp8, lp9]
-    
     let [imageIndex, setImageIndex] = useState(0);
 
-    setInterval(() => {
-        const updatedIndex = (imageIndex + 1)%10;
-        setImageIndex(updatedIndex)
-    }, 5000)
+    const _changeBackgroundImage = () => {
+        imageIndex = (imageIndex + 1 ) % 10;
+        setImageIndex(imageIndex)
+    }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            _changeBackgroundImage()
+        }, 5000)
+    }, [])
     
     return (
         <div className={styles.showcase}>
