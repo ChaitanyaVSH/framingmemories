@@ -24,10 +24,10 @@ const Showcase = () => {
     }
 
     useEffect(() => {
-        const interval = setInterval(() => {
+        setInterval(() => {
             _changeBackgroundImage()
         }, 5000)
-    }, [])
+    }, []) // eslint-disable-line
     
     return (
         <div className={styles.showcase}>
